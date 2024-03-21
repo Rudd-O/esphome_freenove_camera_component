@@ -3,7 +3,8 @@
 The default camera component that ships with ESPHome won't work with the
 Freenove ESP32 camera-enabled microcontroller.  Thanks to the work of
 @MichaKersloot, this component exists and is now updated to work with
-the latest ESPHome.
+the latest ESPHome.  Notably, the `on_image` event from the ESP32
+camera component is now supported.
 
 Derived from: https://github.com/MichaKersloot/esphome_custom_components/
 
