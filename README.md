@@ -11,6 +11,14 @@ Usage in a sketch:
 
 ```yaml
 # Example configuration entry
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+    version: 2.0.7  # needed for this board.
+
+# ...
+
 external_components:
   - source:
       type: git
