@@ -9,7 +9,7 @@ Derived from: https://github.com/MichaKersloot/esphome_custom_components/
 
 Usage in a sketch:
 
-```
+```yaml
 # Example configuration entry
 external_components:
   - source:
