@@ -111,6 +111,8 @@ class ESP32Camera : public Component, public EntityBase {
   ESP32Camera();
 
   /* setters */
+  /* framebuffer assignment */
+  void set_framebuffer_in_dram(bool in_dram);
   /* -- pin assignment */
   void set_data_pins(std::array<uint8_t, 8> pins);
   void set_vsync_pin(uint8_t pin);

@@ -21,6 +21,8 @@ from esphome.cpp_helpers import setup_entity
 
 DEPENDENCIES = ["esp32"]
 
+CONF_FRAMEBUFFER_IN_DRAM = "framebuffer_in_dram"
+
 AUTO_LOAD = ["psram"]
 
 esp32_camera_ns = cg.esphome_ns.namespace("esp32_camera")
