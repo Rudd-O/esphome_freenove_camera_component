@@ -217,12 +217,12 @@ ESP32Camera::ESP32Camera() {
 }
 
 /* ---------------- setters ---------------- */
-/* set framebuffer in DRAM */
-void ESP32Camera::set_framebuffer_in_dram(bool in_dram) {
-  if (in_dram) {
-    this->config_.fb_location = CAMERA_FB_IN_DRAM;
-  } else {
+/* set framebuffer in PSRAM */
+void ESP32Camera::set_framebuffer_in_psram(bool in_psram) {
+  if (in_psram) {
     this->config_.fb_location = CAMERA_FB_IN_PSRAM;
+  } else {
+    this->config_.fb_location = CAMERA_FB_IN_DRAM;
   }
 }
 
