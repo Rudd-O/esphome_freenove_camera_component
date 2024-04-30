@@ -212,12 +212,20 @@ ESP32Camera::ESP32Camera() {
   this->config_.frame_size = FRAMESIZE_VGA;  // 640x480
   this->config_.jpeg_quality = 10;
   this->config_.fb_count = 1;
-  this->config_.fb_location = CAMERA_FB_IN_DRAM;
 
   global_esp32_camera = this;
 }
 
 /* ---------------- setters ---------------- */
+/* set framebuffer in DRAM */
+void ESP32Camera::set_framebuffer_in_dram(bool in_dram) {
+  if (in_dram) {
+    this->config_.fb_location = CAMERA_FB_IN_DRAM;
+  } else {
+    this->config_.fb_location = CAMERA_FB_IN_PSRAM;
+  }
+}
+
 /* set pin assignment */
 void ESP32Camera::set_data_pins(std::array<uint8_t, 8> pins) {
   this->config_.pin_d0 = pins[0];

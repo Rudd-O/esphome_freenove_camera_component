@@ -152,6 +152,7 @@ CONFIG_SCHEMA = cv.ENTITY_BASE_SCHEMA.extend(
     {
         cv.GenerateID(): cv.declare_id(ESP32Camera),
         # pin assignment
+        cv.Optional(CONF_FRAMEBUFFER_IN_DRAM, default=False): cv.boolean,
         cv.Required(CONF_DATA_PINS): cv.All(
             [pins.internal_gpio_input_pin_number], cv.Length(min=8, max=8)
         ),
@@ -237,6 +238,7 @@ CONFIG_SCHEMA = cv.ENTITY_BASE_SCHEMA.extend(
 
 SETTERS = {
     # pin assignment
+    CONF_FRAMEBUFFER_IN_DRAM: "set_framebuffer_in_dram",
     CONF_DATA_PINS: "set_data_pins",
     CONF_VSYNC_PIN: "set_vsync_pin",
     CONF_HREF_PIN: "set_href_pin",
